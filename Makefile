@@ -8,7 +8,7 @@
 #******************************************************************
 
 
-BASENAME  = my-game
+BASENAME  = bomberman64u
 VERSION  := us
 
 # Colors
@@ -46,7 +46,7 @@ O_FILES := $(foreach file,$(S_FILES),$(BUILD_DIR)/$(file).o) \
 
 # Tools
 
-CROSS    = mips64-elf-
+CROSS    = mips-linux-gnu-
 
 AS       = $(CROSS)as
 CPP      = cpp
