@@ -2,7 +2,7 @@ name: Bomberman64U (North America)
 sha1: 8a7648d8105ac4fc1ad942291b2ef89aeca921c9
 options:
   basename: bomberman64u
-  target_path: baserom.z64
+  target_path: baserom.us.z64
   base_path: .
   compiler: IDO
   find_file_boundaries: True
