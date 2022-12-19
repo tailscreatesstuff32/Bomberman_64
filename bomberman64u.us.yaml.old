@@ -12,7 +12,7 @@ options:
   # undefined_funcs_auto_path: undefined_funcs_auto.txt
   # undefined_syms_auto: True
   # undefined_syms_auto_path: undefined_syms_auto.txt
-  symbol_addrs_path: symbol_addrs.us.txt
+  # symbol_addrs_path: symbol_addrs.txt
   # asm_path: asm
   # src_path: src
   # build_path: build
@@ -22,31 +22,19 @@ options:
   # auto_all_sections: [".data", ".rodata", ".bss"]
   # libultra_symbols: True
   # hardware_regs: True
-  symbol_name_format: $VRAM_$ROM
 segments:
   - name: header
     type: header
-    start: 0x00000000
+    start: 0x0
   - name: boot
-    type: code
-    start: 0x0040
-    vram: 0xA4000040
-    exclusive_ram_id: ipl3
-    symbol_name_format: $VRAM
-    subsegments:
-    - [0x0040, bin, ipl3]
-    - [0x0B70, bin, ipl3font]
-  - name: entry
+    type: bin
+    start: 0x40
+  - name: main
     type: code
     start: 0x1000
     vram: 0x80000400
-    symbol_name_format: $VRAM
     subsegments:
-      - [0x1000, hasm,entry]
-      - [0x1050, c,func_80000450]
-      - [0x10D0, c,func_800004D0]  
-      - [0xC790, c,func_8000BB90]
-      - [0xC800, c,func_8000BC00]
+      - [0x1000, asm]
   - type: bin
     start: 0x1AB70
   - [0x800000]
