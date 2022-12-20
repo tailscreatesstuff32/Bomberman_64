@@ -1,0 +1,24 @@
+#include "common.h"
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+#pragma GLOBAL_ASM("asm/nonmatchings/func_8000A420/func_8000A420.s")
+///////////////////////////////////////////////////////////////////////////////
+
+#pragma GLOBAL_ASM("asm/nonmatchings/func_8000A420/func_8000A460.s")
+///////////////////////////////////////////////////////////////////////////////
+
+#pragma GLOBAL_ASM("asm/nonmatchings/func_8000A420/func_8000A4D0.s")
+
+
+//MATCHES
+s32 func_8000A510(s32 arg0)
+{
+s32 retval;
+retval = *(s16*)(arg0 + 0x32);
+return retval;
+}
+//nop
+//nop
+

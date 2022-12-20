@@ -44,7 +44,9 @@ segments:
     subsegments:
       - [0x1000, hasm,entry]
       - [0x1050, c,func_80000450]
-      - [0x10D0, c,func_800004D0]  
+      - [0x10D0, c,func_800004D0]
+      - [0xB020, c,func_8000A420]
+      - [0xB120, c,func_8000A520] 
       - [0xC790, c,func_8000BB90]
       - [0xC800, c,func_8000BC00]
   - type: bin
