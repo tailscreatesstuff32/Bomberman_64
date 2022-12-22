@@ -34,8 +34,10 @@ segments:
     exclusive_ram_id: ipl3
     symbol_name_format: $VRAM
     subsegments:
-    - [0x0040, bin, ipl3]
-    - [0x0B70, bin, ipl3font]
+    - [0x0040, hasm, bootcode]
+    #- [0x0040, bin, ipl3]
+    #- [0x0B70, bin, ipl3font]
+    - [0x0B70, hasm, boot_font]
   - name: entry
     type: code
     start: 0x1000
@@ -49,6 +51,32 @@ segments:
       - [0xB120, c,func_8000A520] 
       - [0xC790, c,func_8000BB90]
       - [0xC800, c,func_8000BC00]
-  - type: bin
-    start: 0x1AB70
-  - [0x800000]
+      
+      
+  - type: code
+    #name: segment_1AB70
+    start: 0x001AB70
+    #vram:  0x80019F6C
+    #exclusive_ram_id: "0x80019F6C"
+    subsegments:
+      #game data starts at 0x001AB70?
+      - [0x001AB70, bin]
+  - [0x00100000, bin]
+  - [0x00120000, bin]
+  - [0x00140000, bin]
+  - [0x00160000, bin]
+  - [0x00180000, bin]
+  - [0x001C0000, bin]
+  - [0x001E0000, bin]
+  - [0x00200000, bin]
+  - [0x00240000, bin]
+  - [0x00260000, bin]
+  - [0x00280000, bin]
+  - [0x002A0000, bin]
+  - [0x002C0000, bin]
+  - [0x002E0000, bin]
+  - [0x00300000, bin]
+  - [0x00800000]  
+  #- type: bin
+  #  start: 0x00300000
+  #- [0x0800000]

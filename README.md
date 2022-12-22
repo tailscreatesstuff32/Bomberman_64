@@ -1,4 +1,4 @@
-# N64 Decomp Template
+# Bomberman64 (100%)
 
 The absolute minimum to start decompiling an N64 game.
 
