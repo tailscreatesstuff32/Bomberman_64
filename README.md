@@ -1,4 +1,4 @@
-# Bomberman64 (100%)
+# Bomberman64 (0%)
 
 The absolute minimum to start decompiling an N64 game.
 
